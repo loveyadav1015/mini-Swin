@@ -1,0 +1,15 @@
+# Swin-Base configuration
+model:
+  variant: base
+  image_size: 224
+  patch_size: 4
+  in_channels: 3
+  num_classes: 1000
+  embed_dim: 128
+  depths: [2, 2, 18, 2]
+  num_heads: [4, 8, 16, 32]
+  window_size: 7
+  mlp_ratio: 4.0
+  drop_rate: 0.0
+  attn_drop_rate: 0.0
+  drop_path_rate: 0.5
