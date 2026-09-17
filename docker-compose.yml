@@ -1,0 +1,26 @@
+# docker-compose.yml — mini-swin multi-service stub
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_CHECKPOINT=checkpoints/swin_tiny.pth
+      - DEVICE=cpu
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../Dockerfile.frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://backend:8000
+    depends_on:
+      - backend

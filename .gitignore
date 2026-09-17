@@ -1,0 +1,18 @@
+# ── Python ────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+
+# ── Node / Frontend ──────────────────────────────
+node_modules/
+dist/
+
+# ── Model artefacts ──────────────────────────────
+*.pth
+*.onnx
+checkpoints/*.pth
+
+# ── Environment ──────────────────────────────────
+.env
