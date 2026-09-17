@@ -1,0 +1,24 @@
+[project]
+name = "mini-swin-backend"
+version = "0.1.0"
+description = "FastAPI backend for the mini-swin Swin Transformer project"
+requires-python = ">=3.10"
+
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "torch",
+    "torchvision",
+    "albumentations",
+    "pydantic",
+    "python-multipart",
+    "onnx",
+    "onnxruntime",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "httpx",
+]
